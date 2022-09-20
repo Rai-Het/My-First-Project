@@ -1,0 +1,653 @@
+/* Start Variables */
+:root {
+  --main-color: #fbe831;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.title {
+  padding: 15px;
+  margin: 20px auto 0;
+  width: fit-content;
+  text-align: center;
+  background-color: var(--main-color);
+}
+hr {
+  margin-bottom: 20px;
+  width: 50%;
+}
+/* End Global Rules */
+/* Start Header Section */
+.header {
+  background-color: var(--main-color);
+}
+.header .container {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header .container .logo {
+  width: 125.5px;
+  height: 50px;
+}
+.header .container .links {
+  display: flex;
+  align-items: center;
+}
+.header .container .links ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .header .container .links ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+}
+.header .container .links ul li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 768px) {
+  .header .container .links ul li:last-child {
+    margin-right: 10px;
+  }
+}
+.header .container .links ul li a {
+  text-decoration: none;
+  color: black;
+}
+/* End Header Section */
+/* Start Landing Section */
+/* Small-Medium*/
+@media (max-width: 992px) {
+  .landing {
+    height: 100vh;
+    background-image: url("../Elements/pexels-adrien-olichon-13025285.jpg");
+    background-size: cover;
+    filter: grayscale(0%);
+  }
+  .landing .container {
+    padding: 0;
+  }
+  .landing .container .text {
+    height: 92.7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .landing .text h1 {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+  }
+  .landing .text p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .landing .text a {
+    width: 125px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: black;
+    font-size: 12.5px;
+  }
+}
+/* Large */
+@media (min-width: 992px) {
+  .landing {
+    height: 60vh;
+    background-image: url("../Elements/pexels-pixabay-262347.jpg");
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: 0.5s;
+  }
+  .landing:hover {
+    filter: grayscale(0%);
+  }
+  .landing .container {
+    padding: 0;
+  }
+  .landing .container .text {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .landing .text h1 {
+    margin: 0;
+    font-size: 50px;
+  }
+  .landing .text p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .landing .text a {
+    width: 162px;
+    padding: 15px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: black;
+  }
+}
+/* End Landing Section */
+/* Start Work Section  */
+
+.work .container {
+  padding: 25px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 380px);
+  grid-gap: 15px;
+}
+.work .container .box-1 {
+  width: 380px;
+  height: 300px;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.work .container .box-1 h1 {
+  margin-top: 0;
+}
+.work .container .box-1 h4 {
+  margin: 0;
+  font-weight: 400;
+}
+.work .container .box-2 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-1.png");
+  position: relative;
+}
+.work .container .box-2:before {
+  content: "Project 1";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-2:hover::before {
+  visibility: visible;
+}
+.work .container .box-3 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-2.jpg");
+  position: relative;
+}
+.work .container .box-3:before {
+  content: "Project 2";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-3:hover::before {
+  visibility: visible;
+}
+.work .container .box-4 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-3.jpg");
+  position: relative;
+}
+.work .container .box-4:before {
+  content: "Project 3";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-4:hover::before {
+  visibility: visible;
+}
+.work .container .box-5 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-4.jpg");
+  position: relative;
+}
+.work .container .box-5:before {
+  content: "Project 4";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-5:hover::before {
+  visibility: visible;
+}
+.work .container .box-6 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-5.jpg");
+  position: relative;
+}
+.work .container .box-6:before {
+  content: "Project 5";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-6:hover::before {
+  visibility: visible;
+}
+.work .container .box-7 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-6.jpg");
+  position: relative;
+}
+.work .container .box-7:before {
+  content: "Project 6";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-7:hover::before {
+  visibility: visible;
+}
+.work .container .box-8 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-7.jpg");
+  position: relative;
+}
+.work .container .box-8:before {
+  content: "Project 7";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-8:hover::before {
+  visibility: visible;
+}
+.work .container .box-9 {
+  width: 380px;
+  height: 300px;
+  background-image: url("../Elements/work-8.jpg");
+  position: relative;
+  display: none;
+}
+.work .container .box-9:before {
+  content: "Project 8";
+  width: 380px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  visibility: hidden;
+}
+.work .container .box-9:hover::before {
+  visibility: visible;
+}
+@media (min-width: 992px) {
+  .work .container .box-9 {
+    visibility: visible;
+  }
+  .work .container .box-9:hover::before {
+    visibility: hidden;
+  }
+}
+@media (min-width: 1200px) {
+  .work .container .box-9 {
+    display: inline-block;
+  }
+  .work .container .box-9:hover::before {
+    visibility: visible;
+  }
+}
+@media (max-width: 767px) {
+  .work h1 {
+    font-size: 15px;
+  }
+  .work .container {
+    padding: 25px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 15px;
+  }
+  .work .container .box-1,
+  .work .container .box-2,
+  .work .container .box-3,
+  .work .container .box-4,
+  .work .container .box-5,
+  .work .container .box-6,
+  .work .container .box-7,
+  .work .container .box-8,
+  .work .container .box-9 {
+    width: 300px;
+    height: 250px;
+  }
+  .work .container .box-1::before,
+  .work .container .box-2::before,
+  .work .container .box-3::before,
+  .work .container .box-4::before,
+  .work .container .box-5::before,
+  .work .container .box-6::before,
+  .work .container .box-7::before,
+  .work .container .box-8::before,
+  .work .container .box-9::before {
+    width: 300px;
+  }
+}
+/* End Work Section  */
+/* Start About Section  */
+.about h1 {
+  margin-top: 0;
+}
+.about p {
+  text-align: center;
+  line-height: 1.6;
+}
+.about .container {
+  padding: 25px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 380px);
+  grid-gap: 15px;
+}
+.about .container .box-1 {
+  width: 380px;
+  height: 400px;
+  background-image: url("../Elements/about-1.jpg");
+  position: relative;
+}
+.about .container .box-1:before {
+  content: "Sara Skywalker";
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-weight: 800;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+}
+.about .container .box-1:after {
+  content: "Web Designer";
+  padding-left: 20px;
+  color: white;
+  font-size: smaller;
+  position: absolute;
+  bottom: 8px;
+}
+.about .container .box-2 {
+  width: 380px;
+  height: 400px;
+  background-image: url("../Elements/about-2.jpg");
+  position: relative;
+}
+.about .container .box-2:before {
+  content: "Simon Robben";
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 20px;
+  font-weight: 800;
+  background-color: var(--main-color);
+  position: absolute;
+  bottom: 0;
+}
+.about .container .box-2:after {
+  content: "Web Designer";
+  padding-left: 20px;
+  color: white;
+  font-size: smaller;
+  position: absolute;
+  bottom: 8px;
+}
+.about .container .box-3 {
+  width: 380px;
+  height: 400px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .container .box-3 p {
+  text-align: left;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .about h1 {
+    font-size: 15px;
+  }
+  .about p {
+    font-size: smaller;
+  }
+  .about .container {
+    padding: 25px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 15px;
+  }
+  .about .container .box-1,
+  .about .container .box-2,
+  .about .container .box-3 {
+    width: 300px;
+    height: 350px;
+  }
+}
+/* End About Section  */
+/* Start Contact Section */
+.contact h1 {
+  margin-top: 0;
+}
+.contact p {
+  text-align: center;
+  line-height: 1.6;
+}
+.contact .container {
+  padding: 25px 0;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 565px);
+  grid-gap: 20px;
+}
+.contact .container .box-1 {
+  display: flex;
+  flex-direction: column;
+}
+.contact .container input {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: #f6f5ed;
+  font-size: 15px;
+}
+.contact .container textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: #f6f5ed;
+  font-size: 15px;
+  resize: none;
+}
+.contact .container a {
+  width: 125px;
+  padding: 10px;
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: black;
+  font-size: 12.5px;
+}
+.contact .container .box-2 {
+  width: 100%;
+  height: 369.75px;
+  background-image: url("../Elements/contact-1.jpg");
+}
+.contact .box-3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.contact .box-3 .group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+.contact .box-3 .group i {
+  color: var(--main-color);
+  -webkit-text-stroke: 3px black;
+}
+.contact .box-3 .group p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.contact .box-3 .group p:nth-child(3) {
+  margin-top: 5px;
+}
+@media (max-width: 767px) {
+  .contact h1 {
+    font-size: 15px;
+  }
+  .contact p {
+    font-size: smaller;
+  }
+  .contact .container {
+    padding: 25px 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 15px;
+  }
+  .contact .box-3 .group:last-child {
+    margin-right: 0;
+  }
+}
+/* End Contact Section */
+/* Start Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background-color: #1e1e1e;
+}
+.footer .logo {
+  width: 125.5px;
+  height: 50px;
+}
+.footer p {
+  color: white;
+}
+/* End Footer */
